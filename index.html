@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=League+Spartan:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet" />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="form-container">
+          <!-- Form content will be dynamically injected here -->
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./assets/images/bg-sidebar-mobile.svg" />
+            <img
+              src="./assets/images/bg-sidebar-desktop.svg"
+              alt="bg-sidebar-desktop"
+              class="bg-sidebar-desktop" />
+          </picture>
+
+          <div class="form-content">
+            <div class="step-1 step">
+              <div class="num num-1 active">
+                <h4>1</h4>
+              </div>
+              <div>
+                <p>step 1</p>
+                <h3>Your info</h3>
+              </div>
+            </div>
+
+            <div class="step-2 step">
+              <div class="num num-2">
+                <h4>2</h4>
+              </div>
+              <div>
+                <p>step 2</p>
+                <h3>Select plan</h3>
+              </div>
+            </div>
+
+            <div class="step-3 step">
+              <div class="num num-3">
+                <h4>3</h4>
+              </div>
+              <div>
+                <p>step 3</p>
+                <h3>Add-ons</h3>
+              </div>
+            </div>
+
+            <div class="step-4 step">
+              <div class="num num-4">
+                <h4>4</h4>
+              </div>
+              <div>
+                <p>step 4</p>
+                <h3>Summary</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOR THE PERSONAL INFO -->
+        <div class="sidebar-info info-1">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+          <form action="" class="forms">
+            <label for="">
+              <div class="label-content">
+                <p>Name</p>
+                <p class="error-content">This field is required</p>
+              </div>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="e.g. Stephen King" />
+            </label>
+
+            <label for="email">
+              <div class="label-content">
+                <p>Email Address</p>
+                <p class="error-content">This field is required</p>
+              </div>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="e.g. stephenking@lorem.com" />
+            </label>
+
+            <label for="phone">
+              <div class="label-content">
+                <p>Phone Number</p>
+                <p class="error-content">This field is required</p>
+              </div>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="e.g. +1 234 567 890" />
+            </label>
+          </form>
+          <div class="btn">
+            <a href="#">Next Step</a>
+          </div>
+        </div>
+
+        <!-- SELECT YOUR PLAN -->
+        <div class="sidebar-info info-2">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+
+          <div class="plans">
+            <div class="plan-content content-1">
+              <img src="./assets/images/icon-arcade.svg" alt="icon-arcade" />
+
+              <div>
+                <h4>Arcade</h4>
+                <!-- MONTHLY -->
+                <span class="monthly">
+                  <p>$9/mo</p>
+                </span>
+
+                <!-- YEARLY -->
+                <span class="yearly">
+                  <p>$90/yr</p>
+                  <h6>2 months free</h6>
+                </span>
+              </div>
+            </div>
+
+            <div class="plan-content">
+              <img
+                src="./assets/images/icon-advanced.svg"
+                alt="icon-advanced" />
+              <div>
+                <h4>Advanced</h4>
+                <!-- MONTHLY -->
+                <span class="monthly">
+                  <p>$12/mo</p>
+                </span>
+
+                <!-- YEARLY -->
+                <span class="yearly">
+                  <p>$120/yr</p>
+                  <h6>2 months free</h6>
+                </span>
+              </div>
+            </div>
+
+            <div class="plan-content content-1">
+              <img src="./assets/images/icon-pro.svg" alt="icon-pro" />
+
+              <div>
+                <h4>Pro</h4>
+                <!-- MONTHLY -->
+                <span class="monthly">
+                  <p>$15/mo</p>
+                </span>
+
+                <!-- YEARLY -->
+                <span class="yearly">
+                  <p>$150/yr</p>
+                  <h6>2 months free</h6>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="switch">
+            <h5>Monthly</h5>
+            <div class="toggle-switch">
+              <span class="ball-monthly ball-yearly"></span>
+            </div>
+            <h5>Yearly</h5>
+          </div>
+
+          <div class="btn btn-2">
+            <p>Go Back</p>
+            <a href="#">Next Step</a>
+          </div>
+        </div>
+
+        <!-- PICK ADD-ONS -->
+        <div class="sidebar-info info-3">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+
+          <div class="add-on-list">
+            <div class="add-ons">
+              <div class="list">
+                <input
+                  type="checkbox"
+                  name="online-service"
+                  id="online-service"
+                  checked
+                  class="checkmark" />
+                <div class="sub-list">
+                  <h5>Online service</h5>
+                  <p>Access to multiplayer games</p>
+                </div>
+              </div>
+
+              <!-- MONTHLY -->
+              <span class="monthly">
+                <p>+$1/mo</p>
+              </span>
+
+              <!-- YEARLY -->
+              <span class="yearly">
+                <p>+$10/yr</p>
+              </span>
+            </div>
+
+            <div class="add-ons">
+              <div class="list">
+                <input
+                  type="checkbox"
+                  name="larger-storage"
+                  id="larger-storage"
+                  class="checkmark" />
+                <div class="sub-list">
+                  <h5>Larger storage</h5>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+              </div>
+
+              <!-- MONTHLY -->
+              <span class="monthly">
+                <p>+$2/mo</p>
+              </span>
+
+              <!-- YEARLY -->
+              <span class="yearly">
+                <p>+$20/yr</p>
+              </span>
+            </div>
+
+            <div class="add-ons">
+              <div class="list">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="customizable-profile"
+                    id="customizable-profile"
+                    class="checkmark" />
+                </div>
+                <div class="sub-list">
+                  <h5>Customizable profile</h5>
+                  <p>Custom theme on your profile</p>
+                </div>
+              </div>
+
+              <!-- MONTHLY -->
+              <span class="monthly">
+                <p>+$2/mo</p>
+              </span>
+
+              <!-- YEARLY -->
+              <span class="yearly">
+                <p>+$20/yr</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="btn btn-2">
+            <p>Go Back</p>
+            <a href="#">Next Step</a>
+          </div>
+        </div>
+
+        <!-- FINISHING UP -->
+        <div class="sidebar-info info-4">
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming.</p>
+          <div class="add-on-list finishing-list">
+            <!-- MONTHLY  -->
+            <span class="monthly">
+              <h4>Arcade (Monthly)</h4>
+            </span>
+            <!-- YEARLY  -->
+            <span class="yearly">
+              <h4>Arcade (Yearly)</h4>
+            </span>
+
+            <div class="finish-list finish-list-1">
+              <p class="change">Change</p>
+
+              <!-- MONTHLY -->
+              <span class="monthly">
+                <h4>$9/mo</h4>
+              </span>
+
+              <!-- YEARLY -->
+              <span class="yearly">
+                <h4>$90/yr</h4>
+              </span>
+            </div>
+
+            <div class="finish-list finish-list-2">
+              <p>Online service</p>
+
+              <!-- MONTHLY -->
+              <span class="monthly">
+                <p>+$1/mo</p>
+              </span>
+
+              <!-- YEARLY -->
+              <span class="yearly">
+                <p>+$10/yr</p>
+              </span>
+            </div>
+
+            <div class="finish-list finish-list-2">
+              <p>Larger storage</p>
+
+              <!-- MONTHLY -->
+              <span class="monthly">
+                <p>+$2/mo</p>
+              </span>
+
+              <!-- YEARLY -->
+              <span class="yearly">
+                <p>+$20/yr</p>
+              </span>
+            </div>
+          </div>
+
+          <div class="finish-list finish-list-3">
+            <p>Total (per month)</p>
+
+            <!-- MONTHLY -->
+            <span class="monthly">
+              <h4>+$12/mo</h4>
+            </span>
+
+            <!-- YEARLY -->
+            <span class="yearly">
+              <h4>+$120/yr</h4>
+            </span>
+          </div>
+          <div class="btn btn-2 btn-3">
+            <p>Go Back</p>
+            <a href="#">Confirm</a>
+          </div>
+        </div>
+
+        <!-- THANK YOU MESSAGE -->
+        <div class="sidebar-info info-5">
+          <div class="thank-you">
+            <img
+              src="./assets/images/icon-thank-you.svg"
+              alt="icon-thank-you" />
+            <h1>Thank you!</h1>
+            <p>
+              Thanks for confirming your subscription! We hope you have
+              <br />fun using our platform. If you ever need support, please
+              feel <br />
+              free to email us at support@loremgaming.com.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamically add subscription and add-on selections here -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

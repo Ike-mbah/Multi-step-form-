@@ -1,0 +1,119 @@
+@media (max-width: 768px) {
+  section {
+    align-items: flex-start; /* Start at top for scrolling */
+    background-color: hsl(218, 100%, 97%);
+  }
+
+  .container {
+    flex-direction: column; /* Stack sidebar on top of form */
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+  }
+
+  /* 1. Sidebar adjustments */
+  .form-container {
+    padding: 0;
+    width: 100%;
+    height: 172px; /* Set height for the mobile SVG background */
+    overflow: hidden;
+  }
+
+  .bg-sidebar-desktop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .form-content {
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%); /* Center the numbers horizontally */
+    display: flex;
+  }
+
+  .step h3,
+  .step p {
+    display: none; /* Hide text labels, show only numbers on mobile */
+  }
+
+  .num {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* 2. Form info box */
+  .sidebar-info {
+    background-color: white;
+    margin: -4.5rem 1rem 1rem 1rem; /* Pull form up over the sidebar bg */
+    padding: 2rem 1.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+
+  .sidebar-info h1 {
+    margin-bottom: 0.8rem;
+  }
+
+  .sidebar-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  /* 3. Plans and Add-ons */
+  .plans {
+    flex-direction: column; /* Stack Arcade, Advanced, Pro */
+    align-items: stretch;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .plan-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+
+  .plans img {
+    margin-bottom: 1rem; /* Align icon with text */
+  }
+
+  .switch {
+    margin-top: 1.3rem; /* Add spacing around the switch */
+  }
+
+  .add-ons {
+    gap: 1rem; /* Reduce large desktop gap */
+    padding: 1rem;
+  }
+
+  .add-on-list {
+    margin-top: 1.5rem;
+  }
+
+  .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* 4. Navigation Buttons */
+  .btn {
+    position: fixed; /* Keep buttons at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 0;
+    justify-content: space-between;
+  }
+
+  /* Make the 'Next' button look full-width or aligned */
+  .info-1 .btn {
+    justify-content: flex-end;
+  }
+}

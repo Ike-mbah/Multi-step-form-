@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  background-color: hsl(218, 100%, 97%);
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 0.5rem;
+}
+
+.form-container {
+  padding: 1rem;
+  position: relative;
+}
+
+.form-content {
+  position: absolute;
+  top: 10%;
+  left: 16%;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.step h3 {
+  color: hsl(0, 100%, 100%);
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.step p {
+  color: hsl(231, 11%, 63%);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.num {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0, 100%, 100%);
+  border: 1px solid hsl(0, 100%, 100%);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.num.active {
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+  border: none;
+}
+
+.sidebar-info {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-info h1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-info p {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.95rem;
+}
+
+.forms {
+  margin-top: 2rem;
+}
+
+.label-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.label-content p {
+  color: hsl(213, 96%, 18%);
+}
+.label-content .error-content {
+  color: hsl(354, 84%, 57%);
+  display: none;
+}
+
+.forms input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+  font-size: 1rem;
+  /* cursor: pointer; */
+}
+
+.forms input::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.forms input:focus {
+  outline: 1px solid hsl(243, 100%, 62%);
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.btn a {
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(218, 100%, 97%);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn a:hover {
+  background-color: hsl(213, 85%, 30%);
+}
+
+.plans {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.plans h4 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.4rem;
+}
+
+.plan-content {
+  padding: 1.5rem 3.5rem 1.2rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+
+.content-1 {
+  padding: 1.5rem 4.5rem 1.2rem 1rem;
+}
+
+.plan-content:hover {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(218, 100%, 97%);
+}
+
+.plans img {
+  margin-bottom: 3rem;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: hsl(218, 100%, 97%);
+  padding: 0.8rem;
+  margin-top: 2rem;
+}
+
+.switch h5 {
+  color: hsl(231, 11%, 63%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.switch:not(.active) h5:first-child {
+  color: hsl(213, 96%, 18%); /* Dark Blue (Active) */
+}
+
+/* When the switch HAS the 'active' class (Yearly is active) */
+.switch.active h5:last-child {
+  color: hsl(213, 96%, 18%); /* Dark Blue (Active) */
+}
+
+.toggle-switch {
+  background-color: hsl(213, 96%, 18%);
+  padding: 0.65rem 1.3rem;
+  border-radius: 0.7rem;
+  border: none;
+  cursor: pointer;
+}
+
+.ball-monthly {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: hsl(0, 100%, 100%);
+  top: 36%;
+  left: 48.3%;
+  transition: all 0.3s;
+}
+
+.ball-yearly.show {
+  left: 52.2%;
+}
+
+.yearly h6 {
+  color: hsl(213, 96%, 18%);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+
+.btn-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-2 p {
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-2 p:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+.add-on-list {
+  margin-top: 3rem;
+}
+
+.add-ons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  gap: 8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checkmark {
+  width: 15px;
+  height: 15px;
+}
+
+.sub-list h5 {
+  margin-bottom: 0.3rem;
+  color: hsl(213, 96%, 18%);
+  font-size: 0.9rem;
+}
+
+.sub-list p {
+  font-size: 0.8rem;
+}
+
+.add-ons > span p {
+  color: hsl(243, 100%, 62%);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.finishing-list {
+  background-color: hsl(218, 100%, 97%);
+  padding: 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.finishing-list h4 {
+  color: hsl(213, 96%, 18%);
+  font-size: 1rem;
+}
+
+.finishing-list p {
+  font-size: 0.95rem;
+}
+
+.finishing-list span p {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.finish-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+
+.finish-list-1 {
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+
+.finish-list-1 p {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.finish-list-1 p:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.finish-list-2 {
+  padding-bottom: 0.4rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.finish-list-3 {
+  padding: 1.3rem;
+}
+
+.finish-list-3 p {
+  font-size: 0.95rem;
+}
+
+.finish-list-3 span h4 {
+  color: hsl(243, 100%, 62%);
+  font-size: 1.2rem;
+}
+
+.btn-3 a {
+  background-color: hsl(243, 100%, 62%);
+}
+
+.btn-3 a:hover {
+  opacity: 0.5;
+}
+
+.thank-you {
+  text-align: center;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.thank-you h1 {
+  margin: 1.7rem 0 1rem 0;
+}
+
+.thank-you p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.info-1 {
+  /* display: none; */
+}
+
+.info-2 {
+  display: none;
+}
+
+.info-3 {
+  display: none;
+}
+
+.info-4 {
+  display: none;
+}
+
+.info-5 {
+  display: none;
+}
+
+.monthly {
+  /* display: none; */
+}
+
+.yearly {
+  display: none;
+}
